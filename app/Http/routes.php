@@ -35,3 +35,10 @@ Route::put('hola', function() {
 
 // Ruta administrada por controlador
 Route::get('prueba', 'PruebaController@prueba');
+
+
+//Route::get('post', 'PostController@index');
+Route::resource('post', 'PostController');
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
