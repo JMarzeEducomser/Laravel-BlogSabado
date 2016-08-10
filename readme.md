@@ -12,12 +12,14 @@ Todos los trabajos deben ser enviados por correo electrónico en formato texto.
 
 1. Realizar ejercicios puntuales para complementar las rutas (patch, delete y options) indicando su funcionalidad.
     - [Referencia](https://laravel.com/docs/5.2/routing)
-2. Implementar CRUD para las tablas: categorias y tags
+2. Implementar CRUD para las tablas: categorias y tags.
+3. Implementar la recuperación de posts eliminados.
+    - [Referencia](https://laravel.com/docs/5.2/eloquent#soft-deleting)
 
 ## Notas Parciales
 
-Código de Alumno | Asistencia | TI-01 | TI-02 | Examen Final
----------------- | :--------: | :---: | :---: | :----------:
+Código de Alumno | Asistencia | TI-01 | TI-02 | TI-03 | Examen Final
+---------------- | :--------: | :---: | :---: | :---: | :----------:
 
 ## Comandos Artisan
 
@@ -41,6 +43,10 @@ php artisan make:seeder PruebasTableSeeder
 Crear un modelo
 ```javascript
 php artisan make:model Prueba
+```
+Crear un request
+```javascript
+php artisan make:request PruebaRequest
 ```
 Ejecutar las migraciones y datos seeding
 ```javascript

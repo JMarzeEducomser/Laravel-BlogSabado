@@ -3,9 +3,14 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+// Eliminación de bajo nivel (1)
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
+    // Eliminación de bajo nivel (2)
+    use SoftDeletes;
+
     protected $table = 'posts';
 
     // Cambiamos el primary key

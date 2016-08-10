@@ -8,24 +8,25 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-btn fa-plus"></i>Agregar nuevo Post
+                    <i class="fa fa-btn fa-edit"></i>Editar Post
                 </div>
 
                 <div class="panel-body">
 
                     @include('post.partial.validation')
 
-                    {!! Form::open(['route' => 'post.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
+                    {!! Form::model($post, ['route' => ['post.update', $post->codigo], 'method' => 'put', 'class' => 'form-horizontal']) !!}
 
                     @include('post.partial.form')
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
-                            <input type="submit" value="Guardar" class="btn btn-success"/>
+                            <input type="submit" value="Guardar cambios" class="btn btn-warning">
                         </div>
                     </div>
 
                     {!! Form::close() !!}
+
                 </div>
             </div>
 

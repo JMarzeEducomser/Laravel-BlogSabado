@@ -23,6 +23,7 @@
                             <th>Categoría</th>
                             <th>Creación</th>
                             <th>Ultima modificación</th>
+                            <th></th>
                         </tr>
                         @foreach($posts as $post)
                         <tr class="table-body">
@@ -38,6 +39,16 @@
                             <td>{{ $post->categoria->nombre }}</td>
                             <td>{{ $post->created_at->diffForHumans() }}</td>
                             <td>{{ $post->updated_at->diffForHumans() }}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="{{ route('post.edit', $post->codigo) }}" class="btn btn-warning">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a href="{{ route('post.show', $post->codigo) }}" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
                         </tr>
                         @endforeach
                     </table>
