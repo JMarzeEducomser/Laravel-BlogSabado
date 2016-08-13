@@ -20,6 +20,12 @@ Todos los trabajos deben ser enviados por correo electrónico en formato texto.
 
 Código de Alumno | Asistencia | TI-01 | TI-02 | TI-03 | Examen Final
 ---------------- | :--------: | :---: | :---: | :---: | :----------:
+CEV130182 | | | | |
+SMV120183 | | | | |
+CCV200486 | | | | |
+GSV280683 | | | | |
+PDV300668 | | | | |
+GTA171268 | | | | |
 
 ## Comandos Artisan
 

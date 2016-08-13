@@ -16,6 +16,8 @@ use App\Tag;
 // Librería de Php para fechas y horas
 use Carbon\Carbon;
 
+use Illuminate\Http\Response;
+
 class PostController extends Controller
 {
     public function __construct(){
@@ -26,9 +28,15 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::orderBy('created_at', 'DESC')->paginate(5);
+        if($request->buscar_post != ''){
+            $posts = Post::likePost($request->buscar_post)->orderBy('created_at', 'DESC')->paginate(5);
+            $posts->appends(['buscar_post' => $request->buscar_post]);
+        }else{
+            $posts = Post::orderBy('created_at', 'DESC')->paginate(5);
+        }
+
         return view('post.index')->with('posts', $posts);
     }
 
@@ -118,5 +126,11 @@ class PostController extends Controller
         $post->delete();
 
         return redirect()->route('post.index');
+    }
+
+    public function getImagen($nombreImagen){
+        $imagen = \Storage::disk('local')->get($nombreImagen);
+
+        return new Response($imagen, 200);
     }
 }

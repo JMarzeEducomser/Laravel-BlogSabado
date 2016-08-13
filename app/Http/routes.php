@@ -36,9 +36,20 @@ Route::put('hola', function() {
 // Ruta administrada por controlador
 Route::get('prueba', 'PruebaController@prueba');
 
+// Ruta para acceder a los archivos de imagen (storage)
+Route::get('post/{nombreImagen}', 'PostController@getImagen')->name('post.imagen');
+
+// Ruta para PDF
+//Route::get('post/{post}/reporte', 'PdfController@reporte')->name('post.reporte')->middleware('auth');
+Route::get('post/{post}/reporte', 'PdfController@reporte')->name('post.reporte');
+
 
 //Route::get('post', 'PostController@index');
-Route::resource('post', 'PostController');
+Route::group(['middleware' => ['admin', 'auth']], function(){
+    Route::resource('post', 'PostController');
+});
+
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');

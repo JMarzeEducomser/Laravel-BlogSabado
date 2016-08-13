@@ -15,7 +15,7 @@
 
                     @include('post.partial.validation')
 
-                    {!! Form::open(['route' => 'post.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
+                    {!! Form::open(['route' => 'post.store', 'method' => 'post', 'class' => 'form-horizontal', 'files' => true]) !!}
 
                     @include('post.partial.form')
 
