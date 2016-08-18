@@ -18,14 +18,13 @@ Todos los trabajos deben ser enviados por correo electrónico en formato texto.
 
 ## Notas Parciales
 
-Código de Alumno | Asistencia | TI-01 | TI-02 | TI-03 | Examen Final
----------------- | :--------: | :---: | :---: | :---: | :----------:
-CEV130182 | | | | |
-SMV120183 | | | | |
-CCV200486 | | | | |
-GSV280683 | | | | |
-PDV300668 | | | | |
-GTA171268 | | | | |
+Código de Alumno | Asistencia (25) | TI-01 (11.7) | TI-02 (11.7) | TI-03 (11.7) | Examen Final (40) | Nota Final 
+---------------- | :-------------: | :----------: | :----------: | :----------: | :---------------: | :--------: 
+CEV130182 | 25 | 5.85 | 4.68 | 4.68 | 40 | 80 
+SMV120183 | 18.75 | - | - | - | 40 | 59  
+CCV200486 | 25 | 5.85 | 5.85 | - | 40 | 77
+GSV280683 | 25 | 5.85 | 5.85 | - | 40 | 77
+PDV300668 | 18.75 | 11.7| 11.7 | 11.7 | 40 | 97
 
 ## Comandos Artisan
 
